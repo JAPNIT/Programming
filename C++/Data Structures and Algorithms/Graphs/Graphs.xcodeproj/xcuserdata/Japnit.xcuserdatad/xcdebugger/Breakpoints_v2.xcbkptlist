@@ -14,9 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "main()"
-            landmarkType = "9">
+            endingLineNumber = "210">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,7 +29,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "165"
             endingLineNumber = "165"
-            landmarkName = "DSP(graph* Graph ,int n)"
+            landmarkName = "Djikstra_Shortest_Path(graph* Graph ,int n)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +45,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
             endingLineNumber = "152"
-            landmarkName = "DSP(graph* Graph ,int n)"
+            landmarkName = "Djikstra_Shortest_Path(graph* Graph ,int n)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +61,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "163"
             endingLineNumber = "163"
-            landmarkName = "DSP(graph* Graph ,int n)"
+            landmarkName = "Djikstra_Shortest_Path(graph* Graph ,int n)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
