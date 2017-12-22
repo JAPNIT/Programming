@@ -20,7 +20,7 @@ struct Node // creating a new data structure
 
 Node* head;
 
-void insert(int x, int n) // inserting a node where data is x at position n
+void insert(int x, int n) // inserting a node where data is x at position n (stars from 0)
 {
     try
     {
@@ -65,7 +65,7 @@ void Delete(int n)
     }
     for(int p=0; p<n-1; p++)
         temp1 = temp1 -> next; // temp1 points to the (n-1)th node
-    Node* temp2 = temp1 -> next; // temp2 points to (n+1)th node
+    Node* temp2 = temp1 -> next; // temp2 points to (n)th node
     temp1 -> next = temp2 -> next; // now the (n-1)th node points to the (n+1)th node
     delete temp2; // deleting the nth node
     
@@ -138,6 +138,14 @@ int main()
     head = NULL;
     // call insert , Delete , print , reverse , print_recur , print_reverse_recur
        
+    insert(4,1);
+    insert(2,0);
+    insert(3,2);
+    insert(18,3);
+    insert(8,4);
     
+    reverse();
+
+    print_recur(head);
 }
 

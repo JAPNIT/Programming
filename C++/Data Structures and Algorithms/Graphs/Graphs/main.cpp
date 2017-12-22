@@ -133,7 +133,7 @@ void Djikstra_Shortest_Path(graph* Graph ,int n)// shortest path from the 0 node
     int shortest_dist[n],count = 0;
     bool visited[n];
     
-    for (int k0 =0; k0<n; k0++)
+    for (int k0=0; k0<n; k0++)
     {
         shortest_dist[k0] = INT_MAX;
         visited[k0] = false;
@@ -141,7 +141,6 @@ void Djikstra_Shortest_Path(graph* Graph ,int n)// shortest path from the 0 node
     
     shortest_dist[0] = 0;
     int min = 0;
-    list <int> queue;
     
     while(count <= n)
     {
