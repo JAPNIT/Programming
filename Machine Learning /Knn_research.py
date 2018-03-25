@@ -1,3 +1,12 @@
+"""
+Do we need all smaples to train the Knn
+if not then how many?
+starting with a certain number of samples
+a certain step size, if a not a significant difference, say not more than 2%
+then half the step size
+I can have a standard testing data.
+"""
+
 import csv, numpy, pandas, random, operator
 from sklearn.preprocessing import Normalizer
 from scipy import stats
@@ -16,7 +25,7 @@ data[:,1:10] = scaler.transform(data[:,1:10])
 frequency = {}
 cul_freq = {0.0:0, 1.0:70 , 2.0:146, 3.0:163, 4.0:163, 5.0:176, 6.0:185, 7:214}
 total_data = 0
-distribution = {1.0:14, 2.0:15, 3.0:4, 5.0:3, 6.0:2, 7.0:7}
+distribution = {1.0:14, 2.0:15, 3.0:4, 5.0:3, 6.0:2, 7.0:6}
 for i in data:
     total_data += 1
     try:
@@ -30,9 +39,19 @@ print(distribution)
 
 count = 0
 total = 0
+sample_size=50
 
-for x in range(10):
+for i in range(1,8):
+    try:
+        percentage = frequency[i] / total_data
+        distribution[i] = int(percentage * sample_size)
+    except:
+        pass
     
+print(distribution)
+
+"""
+for x in range(10):
     #stratification of data to divide train and test in 80-20 ratio
     test = []
     train = []
@@ -58,8 +77,8 @@ for x in range(10):
             dist += pow(float(v1) - float(v2), 2)
         return pow(dist,.5)
     
-    #Knn 
-    def Knn(data, train, k=20):
+    #Knn implementation
+    def Knn(data, train, k=1):
         distances =[]
         for i in range(len(train)):
             dist = dist_calculation(data,train[i])
@@ -82,4 +101,4 @@ for x in range(10):
     print("The number of correct predictions for validation no."  + str(x) + " is: " + str(correct_pred))
 print("Average accuracy is: " + str((count/total) * 100))
 
-
+"""
