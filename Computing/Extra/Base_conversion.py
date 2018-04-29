@@ -1,20 +1,26 @@
-def base_10_to_base_k(n,k):
-    digit_map = "0123456789abcedefghijklmnopqrstuvwxyz"
-    base_k = ""
-    while n != 0:
-        val = n%k
-        base_k += digit_map[val]
-        n = n//2
-    print(base_k[::-1])
+def index(a,n):
+    for i in range(len(a)):
+        if a[i] == n:
+            return i
+    return None
 
-def base_k_to_base_10(n,k):
-    l = len(str(n)) -1 
-    base_10 = 0
-    for i in range(len(str(n))):
-        val = str(n)[l]
-        base_10 += int(val) * (k**i)
-        l -= 1
-    print(base_10)
-    
-base_10_to_base_k(124,2)
-base_k_to_base_10(22,16)
+def denary_to_k(n,k):
+    digit_map = "0123456789abcedf"
+    base_k = ""
+    while n > 0:
+        val = n%k
+        n = n//k
+        base_k = digit_map[val] + base_k
+    print(base_k)
+
+def k_to_denary(n,k):
+    digit_map = "0123456789abcdef"
+    denary = 0
+    power = len(n) - 1
+    for i in range(len(n)):
+        val = index(digit_map,n[i])
+        print(val,power)
+        denary += val * (pow(k,power))
+        power -= 1
+    print(denary)
+                   
