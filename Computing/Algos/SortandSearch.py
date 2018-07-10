@@ -67,7 +67,8 @@ def insertion_sort(a):
             a[j+1] = a[j]
             j -= 1
         a[j+1] = val
+        print(a)
         
     return a
 
-print(insertion_sort([7,3,4,1,9,18,10]))
+print(insertion_sort([10,1,5,9]))
