@@ -1,0 +1,3 @@
+Statistics for:try.txt
+Total Lines5
+Items per Line:8
